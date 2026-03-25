@@ -1,0 +1,69 @@
+{
+  "ols_vs_gs": {
+    "gram_schmidt": {
+      "empathy": 0.12947870649682375,
+      "factual": 0.04000206370297861,
+      "residual": 0.8305192298001977
+    },
+    "ols_type_iii": {
+      "empathy": 0.11509225018042138,
+      "factual": 0.04087763606977788,
+      "residual": 0.8296435306796786
+    },
+    "conclusion_consistent": true
+  },
+  "reversed_ordering": {
+    "empathy_first": {
+      "empathy": 0.12947870649682375,
+      "factual": 0.04000206370297861,
+      "residual": 0.8305192298001977
+    },
+    "factual_first": {
+      "empathy": 0.11358934280061948,
+      "factual": 0.0552640924609164,
+      "residual": 0.8311465647384642
+    },
+    "order_robust": true
+  },
+  "pca": {
+    "layer": 10,
+    "pc1_variance": 0.07699093222618103,
+    "top5_cumulative": 0.31500720977783203,
+    "top10_cumulative": 0.5356465578079224,
+    "cos_mean_diff_pc1": -0.0055814627557992935
+  },
+  "steering_specificity": {
+    "0.5": {
+      "real_shift": 0.0014614105224609376,
+      "random_mean": -0.001203463872273763,
+      "random_std": 0.012380877659814467,
+      "z_score": 0.21524115397604496,
+      "specific": false
+    },
+    "1.0": {
+      "real_shift": 0.004514821370442708,
+      "random_mean": -0.002193511327107747,
+      "random_std": 0.023485055223932336,
+      "z_score": 0.28564261968242516,
+      "specific": false
+    },
+    "2.0": {
+      "real_shift": 0.014690017700195313,
+      "random_mean": 0.012207765579223633,
+      "random_std": 0.05034127725961956,
+      "z_score": 0.04930848512583883,
+      "specific": false
+    }
+  },
+  "metadata": {
+    "model": "allenai/OLMo-2-0425-1B",
+    "device": "mps",
+    "num_layers": 16,
+    "hidden_size": 2048,
+    "num_params_M": 1485,
+    "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+    "torch_version": "2.10.0",
+    "timestamp": "2026-03-23T12:55:09.748725+00:00",
+    "runtime_s": 256.2
+  }
+}

@@ -1,0 +1,920 @@
+{
+  "direction_tokens_by_layer": {
+    "0": {
+      "sycophantic_tokens": [
+        "abyrinth",
+        "isure",
+        "dcc",
+        "estone",
+        "eneric",
+        "manuel",
+        "xFFFFFFFF",
+        "empo",
+        "emarks",
+        "xFFFF"
+      ],
+      "therapeutic_tokens": [
+        "incinn",
+        "Subset",
+        "ointments",
+        "imu",
+        "IMATION",
+        "ornment",
+        "dorf",
+        "yon",
+        "serde",
+        "AccessException"
+      ]
+    },
+    "1": {
+      "sycophantic_tokens": [
+        "isure",
+        "jours",
+        "depart",
+        "alborg",
+        "cbc",
+        "dara",
+        "inaire",
+        "prung",
+        "dcc",
+        "voksne"
+      ],
+      "therapeutic_tokens": [
+        "ants",
+        "erus",
+        "AccessException",
+        "NSObject",
+        "yers",
+        "italiana",
+        "pee",
+        "rics",
+        "gratuito",
+        "dorf"
+      ]
+    },
+    "2": {
+      "sycophantic_tokens": [
+        "appid",
+        "\"{\\\"",
+        "APON",
+        "Fach",
+        "bdd",
+        "dfd",
+        "hasattr",
+        ")\").",
+        "subs",
+        "preorder"
+      ],
+      "therapeutic_tokens": [
+        "ymm",
+        "oord",
+        "elor",
+        "\u00fcrger",
+        "pesan",
+        "vero",
+        "abbo",
+        "fran\u00e7",
+        "rouw",
+        "rippling"
+      ]
+    },
+    "3": {
+      "sycophantic_tokens": [
+        "usaha",
+        "\"{\\\"",
+        "appid",
+        "isure",
+        "indic",
+        "-called",
+        "scen",
+        "Thumbnails",
+        "TRACT",
+        "XMLHttpRequest"
+      ],
+      "therapeutic_tokens": [
+        "abbo",
+        "pesan",
+        "errar",
+        "mith",
+        "vero",
+        "endon",
+        "uisse",
+        "rouw",
+        "yon",
+        "odyn"
+      ]
+    },
+    "4": {
+      "sycophantic_tokens": [
+        "appid",
+        "TRACT",
+        "intendent",
+        "isure",
+        "subs",
+        "aviest",
+        "chnitt",
+        "usaha",
+        "jours",
+        "/if"
+      ],
+      "therapeutic_tokens": [
+        "abbo",
+        "?option",
+        "ymous",
+        "ynom",
+        "ubo",
+        "dorf",
+        "herits",
+        "erland",
+        "urator",
+        "errar"
+      ]
+    },
+    "5": {
+      "sycophantic_tokens": [
+        "nemonic",
+        "fichier",
+        "jours",
+        "asy",
+        "s\u1ea3n",
+        "TRACT",
+        "deser",
+        "lex",
+        "Spir",
+        "allenge"
+      ],
+      "therapeutic_tokens": [
+        "abbo",
+        "contador",
+        "adro",
+        "nero",
+        "cono",
+        "osto",
+        "ubo",
+        "icao",
+        "icions",
+        "oons"
+      ]
+    },
+    "6": {
+      "sycophantic_tokens": [
+        "nemonic",
+        "emetery",
+        "INGS",
+        "ar\u0131",
+        "CORPORATION",
+        "Throne",
+        "dobr",
+        "Reviewed",
+        ".between",
+        "chron"
+      ],
+      "therapeutic_tokens": [
+        "aised",
+        "ubo",
+        "lah",
+        "anda",
+        "UEST",
+        "aye",
+        "contador",
+        "abbo",
+        "neh",
+        "hud"
+      ]
+    },
+    "7": {
+      "sycophantic_tokens": [
+        "Montserrat",
+        "APON",
+        "Throne",
+        "atte",
+        "throne",
+        "acknow",
+        ".between",
+        "Komm",
+        "burge",
+        "'.')"
+      ],
+      "therapeutic_tokens": [
+        "contador",
+        "\u0142\u0105",
+        "anda",
+        "ia\u0142a",
+        "gne",
+        "gratuita",
+        "quier",
+        "autoplay",
+        "orgetown",
+        "ornment"
+      ]
+    },
+    "8": {
+      "sycophantic_tokens": [
+        "atte",
+        "disappe",
+        "_______,",
+        "APON",
+        "(ed",
+        "ationship",
+        "ERVER",
+        "TOK",
+        "homosex",
+        "ernes"
+      ],
+      "therapeutic_tokens": [
+        "contador",
+        "buscar",
+        "autoplay",
+        "Perfil",
+        "anda",
+        "tweets",
+        "ia\u0142a",
+        "utron",
+        "keycode",
+        "orgetown"
+      ]
+    },
+    "9": {
+      "sycophantic_tokens": [
+        "misd",
+        "disappe",
+        ",len",
+        "atte",
+        "enjo",
+        "_______,",
+        "TOK",
+        ")\").",
+        "proport",
+        "\u00e1rios"
+      ],
+      "therapeutic_tokens": [
+        "amus",
+        "buscar",
+        "autoplay",
+        "contador",
+        "anda",
+        "ipheral",
+        "\u00f3pez",
+        "olkata",
+        "orgetown",
+        "ryptography"
+      ]
+    },
+    "10": {
+      "sycophantic_tokens": [
+        ")\").",
+        "misd",
+        "Premiership",
+        "\u00e1rios",
+        "contri",
+        ",len",
+        "elig",
+        "/address",
+        "(er",
+        "penet"
+      ],
+      "therapeutic_tokens": [
+        "contador",
+        "buscar",
+        "neh",
+        "izzas",
+        "abbo",
+        "Perfil",
+        "ax",
+        "zoek",
+        "ryptography",
+        "uiten"
+      ]
+    },
+    "11": {
+      "sycophantic_tokens": [
+        ")\").",
+        "contri",
+        "/address",
+        "resse",
+        ",len",
+        "sacrific",
+        "REGARD",
+        "assum",
+        ",time",
+        "feeling"
+      ],
+      "therapeutic_tokens": [
+        "contador",
+        "izzas",
+        "ismet",
+        "buscar",
+        "ausal",
+        "snprintf",
+        "Produto",
+        "onMouse",
+        "anceled",
+        "zoek"
+      ]
+    },
+    "12": {
+      "sycophantic_tokens": [
+        "resse",
+        ",time",
+        "scrut",
+        "sacrific",
+        "contri",
+        "feels",
+        "%-",
+        "proport",
+        "feeling",
+        "comprom"
+      ],
+      "therapeutic_tokens": [
+        "ausal",
+        "ismet",
+        "kond",
+        "irrelevant",
+        ":none",
+        "snprintf",
+        "onMouse",
+        "lazy",
+        "izzas",
+        "conveniently"
+      ]
+    },
+    "13": {
+      "sycophantic_tokens": [
+        "resse",
+        ",time",
+        "feels",
+        "ixa",
+        "sacrific",
+        "scrut",
+        "physically",
+        ")\").",
+        "feel",
+        "suscept"
+      ],
+      "therapeutic_tokens": [
+        "contador",
+        "izzas",
+        "ausal",
+        "agnost",
+        "snprintf",
+        "Produto",
+        "ascimento",
+        "gsub",
+        "pu\u00e9s",
+        "\u00e1mara"
+      ]
+    },
+    "14": {
+      "sycophantic_tokens": [
+        "sacrific",
+        "vulner",
+        "resse",
+        "penet",
+        "proport",
+        "comprom",
+        "scrut",
+        "ache",
+        "physically",
+        "indust"
+      ],
+      "therapeutic_tokens": [
+        "contador",
+        "Produto",
+        "agnost",
+        "cherry",
+        "Perfil",
+        "izzas",
+        "xlim",
+        "incorrect",
+        "laz",
+        "Convenient"
+      ]
+    },
+    "15": {
+      "sycophantic_tokens": [
+        "--",
+        "physically",
+        "--",
+        "--",
+        "feels",
+        "heart",
+        "----",
+        "......",
+        "soul",
+        "alot"
+      ],
+      "therapeutic_tokens": [
+        "contador",
+        "logits",
+        "edad",
+        "Produto",
+        "interpolated",
+        "categorical",
+        "attribution",
+        "ategories",
+        "incorrect",
+        "ulfilled"
+      ]
+    }
+  },
+  "residual_tokens_by_layer": {
+    "0": {
+      "positive_tokens": [
+        "ottom",
+        "entarios",
+        "onom",
+        "onus",
+        "KeyDown",
+        "ogle",
+        "unta",
+        "jadi",
+        "Minuten",
+        "\u1ec3n"
+      ],
+      "negative_tokens": [
+        "Allowed",
+        "mith",
+        "orna",
+        "planned",
+        "anceled",
+        "locator",
+        "ayers",
+        "part",
+        "raining",
+        "allowed"
+      ]
+    },
+    "1": {
+      "positive_tokens": [
+        "ottom",
+        "\u00e9o",
+        "Kosten",
+        "xlim",
+        "ivant",
+        "encount",
+        "liable",
+        "ungan",
+        "ifiant",
+        "lopedia"
+      ],
+      "negative_tokens": [
+        "mith",
+        "NSObject",
+        "IMATION",
+        "captcha",
+        "paque",
+        "nze",
+        "pee",
+        "tub",
+        "stash",
+        "owing"
+      ]
+    },
+    "2": {
+      "positive_tokens": [
+        "appid",
+        "readcrumb",
+        "unnel",
+        "keypress",
+        "ebx",
+        "PECIAL",
+        "ToList",
+        "bellion",
+        "orderBy",
+        "ISTORY"
+      ],
+      "negative_tokens": [
+        "'id",
+        "sez",
+        "-scalable",
+        "indrome",
+        "etag",
+        "marca",
+        "cip",
+        "nze",
+        "ymm",
+        "mith"
+      ]
+    },
+    "3": {
+      "positive_tokens": [
+        "ReadWrite",
+        "Normalize",
+        "Brewing",
+        "auto",
+        "gate",
+        "ullan",
+        "turb",
+        "appid",
+        "{});",
+        "OTHERWISE"
+      ],
+      "negative_tokens": [
+        "fillna",
+        "sez",
+        "ishlist",
+        "isque",
+        "iamo",
+        "nze",
+        "abbo",
+        "indrome",
+        "'id",
+        "mith"
+      ]
+    },
+    "4": {
+      "positive_tokens": [
+        "intendent",
+        "nemonic",
+        "allenge",
+        "unas",
+        "appid",
+        "unnel",
+        "onium",
+        "una",
+        "anyl",
+        "TRACT"
+      ],
+      "negative_tokens": [
+        "fillna",
+        "xAA",
+        "stown",
+        "ishlist",
+        "iamo",
+        "loaders",
+        "Latest",
+        "cco",
+        "ople",
+        "/vendors"
+      ]
+    },
+    "5": {
+      "positive_tokens": [
+        "nemonic",
+        "intendent",
+        "ummings",
+        "allenge",
+        "as\u0131",
+        "Constructors",
+        "CORPORATION",
+        "Enums",
+        "aru",
+        "ISTORY"
+      ],
+      "negative_tokens": [
+        "xAA",
+        "Latest",
+        "int\u00e9ress",
+        "fancy",
+        "izen",
+        "ser",
+        "Boeh",
+        "ymoon",
+        "izontally",
+        "Initializes"
+      ]
+    },
+    "6": {
+      "positive_tokens": [
+        "nemonic",
+        "Enums",
+        "ummings",
+        "udad",
+        "andatory",
+        "isNaN",
+        "ervlet",
+        "andalone",
+        "ijke",
+        "LOSS"
+      ],
+      "negative_tokens": [
+        "RAY",
+        "ishlist",
+        "UEST",
+        "Genre",
+        "::{",
+        "\u0436\u0435",
+        "basically",
+        "essentially",
+        "izen",
+        "Artikel"
+      ]
+    },
+    "7": {
+      "positive_tokens": [
+        "Enums",
+        "disappe",
+        "'/')",
+        "avere",
+        "'.')",
+        "nemonic",
+        "udad",
+        "phinx",
+        "gi",
+        "ParseException"
+      ],
+      "negative_tokens": [
+        "ishlist",
+        "autoplay",
+        ">Title",
+        "afort",
+        "Artikel",
+        "orgetown",
+        "-xs",
+        "iamo",
+        "okedex",
+        "avit"
+      ]
+    },
+    "8": {
+      "positive_tokens": [
+        "disappe",
+        "avere",
+        "slaught",
+        "gi",
+        "icie",
+        "occas",
+        "ynchronize",
+        "simil",
+        "LEX",
+        "]+$"
+      ],
+      "negative_tokens": [
+        "ishlist",
+        "orgetown",
+        "autoplay",
+        "tweets",
+        "TMZ",
+        "\ufffd\ufffd",
+        "atever",
+        "disponible",
+        "readcr",
+        "/string"
+      ]
+    },
+    "9": {
+      "positive_tokens": [
+        "disappe",
+        "misd",
+        "occas",
+        "avere",
+        "acknow",
+        "spons",
+        "icie",
+        "\u00f3nico",
+        "ffb",
+        "udad"
+      ],
+      "negative_tokens": [
+        "ishlist",
+        "orgetown",
+        "TMZ",
+        "belongs",
+        "lazy",
+        "fundamentally",
+        "<HTML",
+        "salt",
+        "Buccaneers",
+        "_SDK"
+      ]
+    },
+    "10": {
+      "positive_tokens": [
+        "misd",
+        "avere",
+        "disappe",
+        "proport",
+        "occas",
+        ":eq",
+        "Arrays",
+        "\u00edda",
+        "chied",
+        "REGARD"
+      ],
+      "negative_tokens": [
+        "fundamentally",
+        "ishlist",
+        "Tomorrow",
+        "(PHP",
+        "bruar",
+        "TMZ",
+        "tomorrow",
+        "POLITICO",
+        "\u2014you",
+        "lazy"
+      ]
+    },
+    "11": {
+      "positive_tokens": [
+        "REGARD",
+        "misd",
+        "proport",
+        "arrera",
+        "enthusi",
+        "avere",
+        "occas",
+        "CLOSE",
+        "atte",
+        "STRICT"
+      ],
+      "negative_tokens": [
+        "tomorrow",
+        "lazy",
+        "ayaran",
+        "Tomorrow",
+        "your",
+        "zx",
+        "orgetown",
+        "esseract",
+        "indrome",
+        "!\");"
+      ]
+    },
+    "12": {
+      "positive_tokens": [
+        "REGARD",
+        "proport",
+        "enthusi",
+        "excer",
+        "ceremon",
+        "ablish",
+        "nostalg",
+        "diffic",
+        "ritte",
+        "blat"
+      ],
+      "negative_tokens": [
+        "your",
+        "lazy",
+        "ichern",
+        "tomorrow",
+        "glorious",
+        "imaginary",
+        "-disable",
+        "Tomorrow",
+        "YOU",
+        "ishlist"
+      ]
+    },
+    "13": {
+      "positive_tokens": [
+        "ixa",
+        "REGARD",
+        "ceremon",
+        "ampionship",
+        "ahrung",
+        "espec",
+        "enthusi",
+        "arts",
+        "avere",
+        "proport"
+      ],
+      "negative_tokens": [
+        "ichern",
+        "yect",
+        "perfectly",
+        "ishlist",
+        "datable",
+        "ayaran",
+        "enery",
+        "imaginary",
+        "lazy",
+        "\u00e9p"
+      ]
+    },
+    "14": {
+      "positive_tokens": [
+        "arrera",
+        "proport",
+        "spons",
+        "diffic",
+        "controvers",
+        "enthusi",
+        "ahrung",
+        "espec",
+        "REGARD",
+        "izzare"
+      ],
+      "negative_tokens": [
+        "\u2014",
+        "wrong",
+        "your",
+        "perfectly",
+        "Tomorrow",
+        "lazy",
+        "imaginary",
+        "right",
+        "glorious",
+        "correct"
+      ]
+    },
+    "15": {
+      "positive_tokens": [
+        "--",
+        "--",
+        "\u2010",
+        "......",
+        "\ufffd",
+        "\ufffdt",
+        "\ufffds",
+        "{@",
+        "\u0092",
+        "\u00fcnst"
+      ],
+      "negative_tokens": [
+        "\u2014",
+        "wrong",
+        "exagger",
+        "lazy",
+        "typo",
+        "bullshit",
+        "telling",
+        "mistake",
+        "\"\\(",
+        "pretending"
+      ]
+    }
+  },
+  "layer_norms": {
+    "0": 0.3439684510231018,
+    "1": 0.4398998022079468,
+    "2": 0.5808977484703064,
+    "3": 0.6734663248062134,
+    "4": 0.8203833103179932,
+    "5": 1.004831075668335,
+    "6": 1.1098482608795166,
+    "7": 1.3956252336502075,
+    "8": 1.5636459589004517,
+    "9": 1.7088195085525513,
+    "10": 1.947003960609436,
+    "11": 2.6506645679473877,
+    "12": 3.3941071033477783,
+    "13": 4.131402969360352,
+    "14": 5.466346740722656,
+    "15": 7.3881378173828125
+  },
+  "layer_cos_with_final": {
+    "0": 0.04523061588406563,
+    "1": 0.033010534942150116,
+    "2": 0.059836260974407196,
+    "3": 0.09637457877397537,
+    "4": 0.12748780846595764,
+    "5": 0.1577938199043274,
+    "6": 0.20825308561325073,
+    "7": 0.23262721300125122,
+    "8": 0.26174595952033997,
+    "9": 0.3187861740589142,
+    "10": 0.34865593910217285,
+    "11": 0.45891475677490234,
+    "12": 0.5545550584793091,
+    "13": 0.6142593026161194,
+    "14": 0.7880065441131592,
+    "15": 1.000000238418579
+  },
+  "per_stimulus_residual_mean_cos": 0.20674169063568115,
+  "subcat_residual_coherence": {
+    "all_or_nothing": 0.28838157653808594,
+    "catastrophizing": 0.3207796812057495,
+    "discounting_positive": 0.22902050614356995,
+    "emotional_reasoning": 0.2822830379009247,
+    "fortune_telling": 0.2885581851005554,
+    "labeling": 0.38816434144973755,
+    "magnification_minimization": 0.3489966094493866,
+    "mental_filter": 0.47045302391052246,
+    "mind_reading": 0.30542635917663574,
+    "overgeneralization": 0.3289221525192261,
+    "personalization": 0.33901745080947876,
+    "should_statements": 0.2032465934753418
+  },
+  "clinical_factual_divergence": {
+    "0": 0.11899018287658691,
+    "1": 0.14532986283302307,
+    "2": 0.2100554257631302,
+    "3": 0.23406881093978882,
+    "4": 0.21732781827449799,
+    "5": 0.22505581378936768,
+    "6": 0.2497858703136444,
+    "7": 0.29854094982147217,
+    "8": 0.2771226763725281,
+    "9": 0.27634939551353455,
+    "10": 0.2894279360771179,
+    "11": 0.2767183780670166,
+    "12": 0.26445773243904114,
+    "13": 0.26202353835105896,
+    "14": 0.2015293687582016,
+    "15": 0.08898913860321045
+  },
+  "fastest_divergence_layer": 0,
+  "analysis_layer": 10,
+  "metadata": {
+    "model": "allenai/OLMo-2-0425-1B",
+    "device": "mps",
+    "num_layers": 16,
+    "hidden_size": 2048,
+    "num_params_M": 1485,
+    "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+    "torch_version": "2.10.0",
+    "timestamp": "2026-03-23T10:10:05.356285+00:00",
+    "runtime_s": 135.7
+  }
+}

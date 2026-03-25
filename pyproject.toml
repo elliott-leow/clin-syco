@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pals"
+version = "0.1.0"
+description = "Probing Alignment in Language-model Sycophancy"
+requires-python = ">=3.10"
+dependencies = [
+    "torch>=2.1",
+    "transformers>=4.40",
+    "nnsight>=0.3",
+    "scikit-learn>=1.4",
+    "scipy>=1.12",
+    "matplotlib>=3.8",
+    "seaborn>=0.13",
+    "numpy>=1.26",
+    "tqdm>=4.66",
+    "accelerate>=0.28",
+]
+
+[project.optional-dependencies]
+colab = [
+    "jupyter",
+    "ipywidgets",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

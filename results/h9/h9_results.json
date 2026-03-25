@@ -1,0 +1,180 @@
+{
+  "decomposition_by_layer": {
+    "0": {
+      "empathy_projection": 0.5217019319534302,
+      "factual_projection": 0.11899030953645706,
+      "empathy_variance_explained": 0.27217293824948313,
+      "factual_variance_explained": 0.01415869545142984,
+      "empathy_unique_ve": 0.27217270496217427,
+      "factual_unique_ve": 0.024202351544346835,
+      "residual_variance_fraction": 0.7036249434934789,
+      "residual_norm": 0.8388234972953796
+    },
+    "1": {
+      "empathy_projection": 0.45701491832733154,
+      "factual_projection": 0.14532987773418427,
+      "empathy_variance_explained": 0.20886258577701364,
+      "factual_variance_explained": 0.021120768326649074,
+      "empathy_unique_ve": 0.2088624270175748,
+      "factual_unique_ve": 0.02584514936263916,
+      "residual_variance_fraction": 0.765292423619786,
+      "residual_norm": 0.8748100399971008
+    },
+    "2": {
+      "empathy_projection": 0.42354846000671387,
+      "factual_projection": 0.21005544066429138,
+      "empathy_variance_explained": 0.17939331935940842,
+      "factual_variance_explained": 0.04412329341257594,
+      "empathy_unique_ve": 0.17939336098954384,
+      "factual_unique_ve": 0.045163351475134166,
+      "residual_variance_fraction": 0.775443287535322,
+      "residual_norm": 0.8805925250053406
+    },
+    "3": {
+      "empathy_projection": 0.3825035095214844,
+      "factual_projection": 0.23406872153282166,
+      "empathy_variance_explained": 0.146308952237638,
+      "factual_variance_explained": 0.054788172931268586,
+      "empathy_unique_ve": 0.1463089957628764,
+      "factual_unique_ve": 0.047477014194872415,
+      "residual_variance_fraction": 0.8062139900422511,
+      "residual_norm": 0.8978941440582275
+    },
+    "4": {
+      "empathy_projection": 0.3668537735939026,
+      "factual_projection": 0.21732784807682037,
+      "empathy_variance_explained": 0.13458169120008634,
+      "factual_variance_explained": 0.04723139354970152,
+      "empathy_unique_ve": 0.13458172775468924,
+      "factual_unique_ve": 0.03997180536227418,
+      "residual_variance_fraction": 0.8254464668830366,
+      "residual_norm": 0.9085408449172974
+    },
+    "5": {
+      "empathy_projection": 0.37543749809265137,
+      "factual_projection": 0.2250557243824005,
+      "empathy_variance_explained": 0.1409533485799647,
+      "factual_variance_explained": 0.05065009115320907,
+      "empathy_unique_ve": 0.14095325353153199,
+      "factual_unique_ve": 0.04083032069985846,
+      "residual_variance_fraction": 0.8182164257686095,
+      "residual_norm": 0.9045530557632446
+    },
+    "6": {
+      "empathy_projection": 0.37409335374832153,
+      "factual_projection": 0.24978584051132202,
+      "empathy_variance_explained": 0.13994583731866683,
+      "factual_variance_explained": 0.0623929661199476,
+      "empathy_unique_ve": 0.13994561510661185,
+      "factual_unique_ve": 0.047299499198288686,
+      "residual_variance_fraction": 0.8127548856950995,
+      "residual_norm": 0.9015291929244995
+    },
+    "7": {
+      "empathy_projection": 0.3316594958305359,
+      "factual_projection": 0.298540860414505,
+      "empathy_variance_explained": 0.10999804740014185,
+      "factual_variance_explained": 0.0891266665864849,
+      "empathy_unique_ve": 0.10999820425889371,
+      "factual_unique_ve": 0.06560688649160568,
+      "residual_variance_fraction": 0.8243949092495007,
+      "residual_norm": 0.9079618453979492
+    },
+    "8": {
+      "empathy_projection": 0.31344133615493774,
+      "factual_projection": 0.27712273597717285,
+      "empathy_variance_explained": 0.09824548292236655,
+      "factual_variance_explained": 0.07679701995039177,
+      "empathy_unique_ve": 0.09824516499625918,
+      "factual_unique_ve": 0.05133867688717363,
+      "residual_variance_fraction": 0.8504161581165672,
+      "residual_norm": 0.9221800565719604
+    },
+    "9": {
+      "empathy_projection": 0.3092847466468811,
+      "factual_projection": 0.27634942531585693,
+      "empathy_variance_explained": 0.09565707731484853,
+      "factual_variance_explained": 0.07636902308019727,
+      "empathy_unique_ve": 0.09565676168524542,
+      "factual_unique_ve": 0.05123744688449836,
+      "residual_variance_fraction": 0.8531057914302562,
+      "residual_norm": 0.9236371517181396
+    },
+    "10": {
+      "empathy_projection": 0.27765339612960815,
+      "factual_projection": 0.28942805528640747,
+      "empathy_variance_explained": 0.0770914083823051,
+      "factual_variance_explained": 0.08376859918687174,
+      "empathy_unique_ve": 0.07709128834738621,
+      "factual_unique_ve": 0.04860980719769614,
+      "residual_variance_fraction": 0.8742989044549176,
+      "residual_norm": 0.9350395202636719
+    },
+    "11": {
+      "empathy_projection": 0.29288551211357117,
+      "factual_projection": 0.2767183184623718,
+      "empathy_variance_explained": 0.08578194365803675,
+      "factual_variance_explained": 0.07657304602907837,
+      "empathy_unique_ve": 0.08578198366907278,
+      "factual_unique_ve": 0.04637216876410968,
+      "residual_variance_fraction": 0.8678458475668176,
+      "residual_norm": 0.9315823316574097
+    },
+    "12": {
+      "empathy_projection": 0.3056027293205261,
+      "factual_projection": 0.26445773243904114,
+      "empathy_variance_explained": 0.09339306156811332,
+      "factual_variance_explained": 0.06993791725854552,
+      "empathy_unique_ve": 0.09339293825291914,
+      "factual_unique_ve": 0.041640884257575846,
+      "residual_variance_fraction": 0.864966177489505,
+      "residual_norm": 0.930035412311554
+    },
+    "13": {
+      "empathy_projection": 0.31571823358535767,
+      "factual_projection": 0.26202359795570374,
+      "empathy_variance_explained": 0.09967797925317487,
+      "factual_variance_explained": 0.06865634951670199,
+      "empathy_unique_ve": 0.09967816887158748,
+      "factual_unique_ve": 0.04116864827232766,
+      "residual_variance_fraction": 0.8591531828560849,
+      "residual_norm": 0.9269052743911743
+    },
+    "14": {
+      "empathy_projection": 0.2879495918750763,
+      "factual_projection": 0.2015293538570404,
+      "empathy_variance_explained": 0.0829150069979746,
+      "factual_variance_explained": 0.040614099832345846,
+      "empathy_unique_ve": 0.08291470525613331,
+      "factual_unique_ve": 0.021817248148146465,
+      "residual_variance_fraction": 0.8952680465957202,
+      "residual_norm": 0.946185827255249
+    },
+    "15": {
+      "empathy_projection": 0.3266211748123169,
+      "factual_projection": 0.08898907154798508,
+      "empathy_variance_explained": 0.10668141727060848,
+      "factual_variance_explained": 0.00791905674302255,
+      "empathy_unique_ve": 0.10668154128228699,
+      "factual_unique_ve": 0.0014523056653017988,
+      "residual_variance_fraction": 0.8918661530524112,
+      "residual_norm": 0.9443865418434143
+    }
+  },
+  "mean_unique_variance_explained": {
+    "empathy": 0.12947867760904916,
+    "factual_sycophancy": 0.04000209777536557,
+    "residual": 0.8305192246155852
+  },
+  "metadata": {
+    "model": "allenai/OLMo-2-0425-1B",
+    "device": "mps",
+    "num_layers": 16,
+    "hidden_size": 2048,
+    "num_params_M": 1485,
+    "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+    "torch_version": "2.10.0",
+    "timestamp": "2026-03-23T08:39:16.456682+00:00",
+    "runtime_s": 70.5
+  }
+}

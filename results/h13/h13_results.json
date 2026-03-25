@@ -1,0 +1,25 @@
+{
+  "interaction": {
+    "high": {
+      "3": 0.35470299888402224
+    },
+    "low": {
+      "1": 0.593458017334342
+    },
+    "medium": {
+      "2": 0.43721127696335316
+    }
+  },
+  "slopes": {},
+  "metadata": {
+    "model": "allenai/OLMo-2-0425-1B",
+    "device": "mps",
+    "num_layers": 16,
+    "hidden_size": 2048,
+    "num_params_M": 1485,
+    "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+    "torch_version": "2.10.0",
+    "timestamp": "2026-03-23T08:27:05.748528+00:00",
+    "runtime_s": 42.8
+  }
+}

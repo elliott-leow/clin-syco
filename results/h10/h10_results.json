@@ -1,0 +1,474 @@
+{
+  "decomposition_2comp": {
+    "0": {
+      "variance_explained": {
+        "empathy": 0.27217293824948313,
+        "factual_sycophancy": 0.01415869545142984
+      },
+      "unique_variance_explained": {
+        "empathy": 0.27217270496217427,
+        "factual_sycophancy": 0.024202351544346835
+      },
+      "residual": 0.7036249434934789
+    },
+    "1": {
+      "variance_explained": {
+        "empathy": 0.20886258577701364,
+        "factual_sycophancy": 0.021120768326649074
+      },
+      "unique_variance_explained": {
+        "empathy": 0.2088624270175748,
+        "factual_sycophancy": 0.02584514936263916
+      },
+      "residual": 0.765292423619786
+    },
+    "2": {
+      "variance_explained": {
+        "empathy": 0.17939331935940842,
+        "factual_sycophancy": 0.04412329341257594
+      },
+      "unique_variance_explained": {
+        "empathy": 0.17939336098954384,
+        "factual_sycophancy": 0.045163351475134166
+      },
+      "residual": 0.775443287535322
+    },
+    "3": {
+      "variance_explained": {
+        "empathy": 0.146308952237638,
+        "factual_sycophancy": 0.054788172931268586
+      },
+      "unique_variance_explained": {
+        "empathy": 0.1463089957628764,
+        "factual_sycophancy": 0.047477014194872415
+      },
+      "residual": 0.8062139900422511
+    },
+    "4": {
+      "variance_explained": {
+        "empathy": 0.13458169120008634,
+        "factual_sycophancy": 0.04723139354970152
+      },
+      "unique_variance_explained": {
+        "empathy": 0.13458172775468924,
+        "factual_sycophancy": 0.03997180536227418
+      },
+      "residual": 0.8254464668830366
+    },
+    "5": {
+      "variance_explained": {
+        "empathy": 0.1409533485799647,
+        "factual_sycophancy": 0.05065009115320907
+      },
+      "unique_variance_explained": {
+        "empathy": 0.14095325353153199,
+        "factual_sycophancy": 0.04083032069985846
+      },
+      "residual": 0.8182164257686095
+    },
+    "6": {
+      "variance_explained": {
+        "empathy": 0.13994583731866683,
+        "factual_sycophancy": 0.0623929661199476
+      },
+      "unique_variance_explained": {
+        "empathy": 0.13994561510661185,
+        "factual_sycophancy": 0.047299499198288686
+      },
+      "residual": 0.8127548856950995
+    },
+    "7": {
+      "variance_explained": {
+        "empathy": 0.10999804740014185,
+        "factual_sycophancy": 0.0891266665864849
+      },
+      "unique_variance_explained": {
+        "empathy": 0.10999820425889371,
+        "factual_sycophancy": 0.06560688649160568
+      },
+      "residual": 0.8243949092495007
+    },
+    "8": {
+      "variance_explained": {
+        "empathy": 0.09824548292236655,
+        "factual_sycophancy": 0.07679701995039177
+      },
+      "unique_variance_explained": {
+        "empathy": 0.09824516499625918,
+        "factual_sycophancy": 0.05133867688717363
+      },
+      "residual": 0.8504161581165672
+    },
+    "9": {
+      "variance_explained": {
+        "empathy": 0.09565707731484853,
+        "factual_sycophancy": 0.07636902308019727
+      },
+      "unique_variance_explained": {
+        "empathy": 0.09565676168524542,
+        "factual_sycophancy": 0.05123744688449836
+      },
+      "residual": 0.8531057914302562
+    },
+    "10": {
+      "variance_explained": {
+        "empathy": 0.0770914083823051,
+        "factual_sycophancy": 0.08376859918687174
+      },
+      "unique_variance_explained": {
+        "empathy": 0.07709128834738621,
+        "factual_sycophancy": 0.04860980719769614
+      },
+      "residual": 0.8742989044549176
+    },
+    "11": {
+      "variance_explained": {
+        "empathy": 0.08578194365803675,
+        "factual_sycophancy": 0.07657304602907837
+      },
+      "unique_variance_explained": {
+        "empathy": 0.08578198366907278,
+        "factual_sycophancy": 0.04637216876410968
+      },
+      "residual": 0.8678458475668176
+    },
+    "12": {
+      "variance_explained": {
+        "empathy": 0.09339306156811332,
+        "factual_sycophancy": 0.06993791725854552
+      },
+      "unique_variance_explained": {
+        "empathy": 0.09339293825291914,
+        "factual_sycophancy": 0.041640884257575846
+      },
+      "residual": 0.864966177489505
+    },
+    "13": {
+      "variance_explained": {
+        "empathy": 0.09967797925317487,
+        "factual_sycophancy": 0.06865634951670199
+      },
+      "unique_variance_explained": {
+        "empathy": 0.09967816887158748,
+        "factual_sycophancy": 0.04116864827232766
+      },
+      "residual": 0.8591531828560849
+    },
+    "14": {
+      "variance_explained": {
+        "empathy": 0.0829150069979746,
+        "factual_sycophancy": 0.040614099832345846
+      },
+      "unique_variance_explained": {
+        "empathy": 0.08291470525613331,
+        "factual_sycophancy": 0.021817248148146465
+      },
+      "residual": 0.8952680465957202
+    },
+    "15": {
+      "variance_explained": {
+        "empathy": 0.10668141727060848,
+        "factual_sycophancy": 0.00791905674302255
+      },
+      "unique_variance_explained": {
+        "empathy": 0.10668154128228699,
+        "factual_sycophancy": 0.0014523056653017988
+      },
+      "residual": 0.8918661530524112
+    }
+  },
+  "decomposition_5comp": {
+    "0": {
+      "variance_explained": {
+        "empathy": 0.27217293824948313,
+        "factual_sycophancy": 0.01415869545142984,
+        "conflict_avoidance": 0.2574795062877027,
+        "clinical_warmth": 0.23825603212723878,
+        "framing_acceptance": 0.5789143971264543
+      },
+      "unique_variance_explained": {
+        "empathy": 0.27217270496217427,
+        "factual_sycophancy": 0.024202351544346835,
+        "conflict_avoidance": 0.014685607857601523,
+        "clinical_warmth": 0.00022043525770449308,
+        "framing_acceptance": 0.06795810332190828
+      },
+      "residual": 0.6207607970562646
+    },
+    "1": {
+      "variance_explained": {
+        "empathy": 0.20886258577701364,
+        "factual_sycophancy": 0.021120768326649074,
+        "conflict_avoidance": 0.22106402768721833,
+        "clinical_warmth": 0.18871514120114874,
+        "framing_acceptance": 0.5639286904222478
+      },
+      "unique_variance_explained": {
+        "empathy": 0.2088624270175748,
+        "factual_sycophancy": 0.02584514936263916,
+        "conflict_avoidance": 0.016373041183032698,
+        "clinical_warmth": 0.00010738972820049109,
+        "framing_acceptance": 0.09483878372653216
+      },
+      "residual": 0.6539732089820207
+    },
+    "2": {
+      "variance_explained": {
+        "empathy": 0.17939331935940842,
+        "factual_sycophancy": 0.04412329341257594,
+        "conflict_avoidance": 0.2100630040873795,
+        "clinical_warmth": 0.1567582646901058,
+        "framing_acceptance": 0.5750579297532625
+      },
+      "unique_variance_explained": {
+        "empathy": 0.17939336098954384,
+        "factual_sycophancy": 0.045163351475134166,
+        "conflict_avoidance": 0.01399295139922615,
+        "clinical_warmth": 1.0402301416843702e-05,
+        "framing_acceptance": 0.11823721782068321
+      },
+      "residual": 0.6432027160139958
+    },
+    "3": {
+      "variance_explained": {
+        "empathy": 0.146308952237638,
+        "factual_sycophancy": 0.054788172931268586,
+        "conflict_avoidance": 0.2008578209741568,
+        "clinical_warmth": 0.10809492651570364,
+        "framing_acceptance": 0.5576770195600604
+      },
+      "unique_variance_explained": {
+        "empathy": 0.1463089957628764,
+        "factual_sycophancy": 0.047477014194872415,
+        "conflict_avoidance": 0.013331798533659317,
+        "clinical_warmth": 0.0005834978623189313,
+        "framing_acceptance": 0.15289078842483908
+      },
+      "residual": 0.6394079052214339
+    },
+    "4": {
+      "variance_explained": {
+        "empathy": 0.13458169120008634,
+        "factual_sycophancy": 0.04723139354970152,
+        "conflict_avoidance": 0.16630464720154592,
+        "clinical_warmth": 0.09415662146665316,
+        "framing_acceptance": 0.5753193261746361
+      },
+      "unique_variance_explained": {
+        "empathy": 0.13458172775468924,
+        "factual_sycophancy": 0.03997180536227418,
+        "conflict_avoidance": 0.011405723973098247,
+        "clinical_warmth": 0.000301450533338965,
+        "framing_acceptance": 0.1847303596551093
+      },
+      "residual": 0.62900893272149
+    },
+    "5": {
+      "variance_explained": {
+        "empathy": 0.1409533485799647,
+        "factual_sycophancy": 0.05065009115320907,
+        "conflict_avoidance": 0.15437057952309846,
+        "clinical_warmth": 0.08776301547923963,
+        "framing_acceptance": 0.5938659645691184
+      },
+      "unique_variance_explained": {
+        "empathy": 0.14095325353153199,
+        "factual_sycophancy": 0.04083032069985846,
+        "conflict_avoidance": 0.007185228170369383,
+        "clinical_warmth": 0.0004740176634740046,
+        "framing_acceptance": 0.20318113783581115
+      },
+      "residual": 0.607376042098955
+    },
+    "6": {
+      "variance_explained": {
+        "empathy": 0.13994583731866683,
+        "factual_sycophancy": 0.0623929661199476,
+        "conflict_avoidance": 0.18133545862851008,
+        "clinical_warmth": 0.07711459587992042,
+        "framing_acceptance": 0.5894317720158746
+      },
+      "unique_variance_explained": {
+        "empathy": 0.13994561510661185,
+        "factual_sycophancy": 0.047299499198288686,
+        "conflict_avoidance": 0.009524567605026846,
+        "clinical_warmth": 0.0018168384261763038,
+        "framing_acceptance": 0.20434384221629287
+      },
+      "residual": 0.5970696374476034
+    },
+    "7": {
+      "variance_explained": {
+        "empathy": 0.10999804740014185,
+        "factual_sycophancy": 0.0891266665864849,
+        "conflict_avoidance": 0.18830142800478517,
+        "clinical_warmth": 0.05102285556991587,
+        "framing_acceptance": 0.5953832711678778
+      },
+      "unique_variance_explained": {
+        "empathy": 0.10999820425889371,
+        "factual_sycophancy": 0.06560688649160568,
+        "conflict_avoidance": 0.007278099374189935,
+        "clinical_warmth": 0.003189985440017602,
+        "framing_acceptance": 0.24265230977582378
+      },
+      "residual": 0.5712745146594693
+    },
+    "8": {
+      "variance_explained": {
+        "empathy": 0.09824548292236655,
+        "factual_sycophancy": 0.07679701995039177,
+        "conflict_avoidance": 0.1686907595293004,
+        "clinical_warmth": 0.04581561964288756,
+        "framing_acceptance": 0.5884932889256386
+      },
+      "unique_variance_explained": {
+        "empathy": 0.09824516499625918,
+        "factual_sycophancy": 0.05133867688717363,
+        "conflict_avoidance": 0.007945519582290887,
+        "clinical_warmth": 0.003234558586036133,
+        "framing_acceptance": 0.2604634415113572
+      },
+      "residual": 0.578772638436883
+    },
+    "9": {
+      "variance_explained": {
+        "empathy": 0.09565707731484853,
+        "factual_sycophancy": 0.07636902308019727,
+        "conflict_avoidance": 0.172517190356161,
+        "clinical_warmth": 0.041810602526276316,
+        "framing_acceptance": 0.5841395787408822
+      },
+      "unique_variance_explained": {
+        "empathy": 0.09565676168524542,
+        "factual_sycophancy": 0.05123744688449836,
+        "conflict_avoidance": 0.009427086079316638,
+        "clinical_warmth": 0.005341389450015146,
+        "framing_acceptance": 0.2641907254332644
+      },
+      "residual": 0.57414659046766
+    },
+    "10": {
+      "variance_explained": {
+        "empathy": 0.0770914083823051,
+        "factual_sycophancy": 0.08376859918687174,
+        "conflict_avoidance": 0.1740258259992835,
+        "clinical_warmth": 0.04837611705316136,
+        "framing_acceptance": 0.5631011541636468
+      },
+      "unique_variance_explained": {
+        "empathy": 0.07709128834738621,
+        "factual_sycophancy": 0.04860980719769614,
+        "conflict_avoidance": 0.009756946873689998,
+        "clinical_warmth": 0.0031409448270274254,
+        "framing_acceptance": 0.24926867519523555
+      },
+      "residual": 0.6121323375589647
+    },
+    "11": {
+      "variance_explained": {
+        "empathy": 0.08578194365803675,
+        "factual_sycophancy": 0.07657304602907837,
+        "conflict_avoidance": 0.169233367316631,
+        "clinical_warmth": 0.06886130026347587,
+        "framing_acceptance": 0.5631594355067325
+      },
+      "unique_variance_explained": {
+        "empathy": 0.08578198366907278,
+        "factual_sycophancy": 0.04637216876410968,
+        "conflict_avoidance": 0.009410216829024605,
+        "clinical_warmth": 0.0003863091157426068,
+        "framing_acceptance": 0.2189337586948453
+      },
+      "residual": 0.6391155629272051
+    },
+    "12": {
+      "variance_explained": {
+        "empathy": 0.09339306156811332,
+        "factual_sycophancy": 0.06993791725854552,
+        "conflict_avoidance": 0.1681233962015571,
+        "clinical_warmth": 0.10073373961812969,
+        "framing_acceptance": 0.5809970203499184
+      },
+      "unique_variance_explained": {
+        "empathy": 0.09339293825291914,
+        "factual_sycophancy": 0.041640884257575846,
+        "conflict_avoidance": 0.011145545689829336,
+        "clinical_warmth": 0.0004089464450519151,
+        "framing_acceptance": 0.19190499288553786
+      },
+      "residual": 0.6615066924690859
+    },
+    "13": {
+      "variance_explained": {
+        "empathy": 0.09967797925317487,
+        "factual_sycophancy": 0.06865634951670199,
+        "conflict_avoidance": 0.14736619075262072,
+        "clinical_warmth": 0.11529260882905323,
+        "framing_acceptance": 0.5889723707224978
+      },
+      "unique_variance_explained": {
+        "empathy": 0.09967816887158748,
+        "factual_sycophancy": 0.04116864827232766,
+        "conflict_avoidance": 0.006887590899824302,
+        "clinical_warmth": 0.003043514430747478,
+        "framing_acceptance": 0.1822987295783762
+      },
+      "residual": 0.6669233479471368
+    },
+    "14": {
+      "variance_explained": {
+        "empathy": 0.0829150069979746,
+        "factual_sycophancy": 0.040614099832345846,
+        "conflict_avoidance": 0.09386792964782752,
+        "clinical_warmth": 0.08405124578390719,
+        "framing_acceptance": 0.5648874593722949
+      },
+      "unique_variance_explained": {
+        "empathy": 0.08291470525613331,
+        "factual_sycophancy": 0.021817248148146465,
+        "conflict_avoidance": 0.004401558582195698,
+        "clinical_warmth": 0.0016685139703445187,
+        "framing_acceptance": 0.22263878270327458
+      },
+      "residual": 0.6665591913399054
+    },
+    "15": {
+      "variance_explained": {
+        "empathy": 0.10668141727060848,
+        "factual_sycophancy": 0.00791905674302255,
+        "conflict_avoidance": 0.055939436316477756,
+        "clinical_warmth": 0.15674167005229403,
+        "framing_acceptance": 0.5707475417931849
+      },
+      "unique_variance_explained": {
+        "empathy": 0.10668154128228699,
+        "factual_sycophancy": 0.0014523056653017988,
+        "conflict_avoidance": 0.002944900902509113,
+        "clinical_warmth": 0.01563528919295519,
+        "framing_acceptance": 0.15323954806215445
+      },
+      "residual": 0.7200464148947925
+    }
+  },
+  "mean_variance_explained_5comp": {
+    "empathy": 0.12947875609311443,
+    "factual_sycophancy": 0.055264197445526346,
+    "conflict_avoidance": 0.17059628553214098,
+    "clinical_warmth": 0.10397277229369445,
+    "framing_acceptance": 0.5771297637727705
+  },
+  "mean_residual_2comp": 0.8305192246155852,
+  "mean_residual_5comp": 0.6300797831401791,
+  "metadata": {
+    "model": "allenai/OLMo-2-0425-1B",
+    "device": "mps",
+    "num_layers": 16,
+    "hidden_size": 2048,
+    "num_params_M": 1485,
+    "platform": "macOS-26.3-arm64-arm-64bit-Mach-O",
+    "torch_version": "2.10.0",
+    "timestamp": "2026-03-23T08:20:10.453731+00:00",
+    "runtime_s": 236.6
+  }
+}
