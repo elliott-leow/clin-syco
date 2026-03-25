@@ -82,13 +82,15 @@ def run(model, tokenizer, stimuli_dir, output_dir,
         print(f"\n--- {ckpt_name}: {model_id}" + (f" (rev: {revision})" if revision else "") + " ---")
 
         from transformers import AutoModelForCausalLM, AutoTokenizer
-        kwargs = {"dtype": torch.float32}
+        kwargs = {"torch_dtype": torch.float32, "attn_implementation": "eager"}
         if quantize_4bit:
             from transformers import BitsAndBytesConfig
             kwargs = {"quantization_config": BitsAndBytesConfig(load_in_4bit=True,
-                      bnb_4bit_compute_dtype=torch.float16), "device_map": "auto"}
+                      bnb_4bit_compute_dtype=torch.float16), "device_map": "auto",
+                      "attn_implementation": "eager"}
         elif device == "cuda":
-            kwargs = {"dtype": torch.float16, "device_map": "auto"}
+            kwargs = {"torch_dtype": torch.float16, "device_map": "auto",
+                      "attn_implementation": "eager"}
 
         if revision:
             kwargs["revision"] = revision
