@@ -1,5 +1,6 @@
 """Activation extraction using PyTorch forward hooks."""
 
+import gc
 import torch
 from tqdm import tqdm
 from pals.models import get_device
@@ -25,7 +26,7 @@ def extract_activations(model, input_ids, layers=None):
     def make_hook(idx):
         def fn(module, inp, out):
             h = out[0] if isinstance(out, tuple) else out
-            hidden[idx] = h.detach().float().cpu().squeeze(0)
+            hidden[idx] = h.detach().cpu().float().squeeze(0)
         return fn
 
     for i in targets:
@@ -92,7 +93,7 @@ def batch_extract_contrastive(model, tokenizer, stimuli, pos_key, neg_key,
         layer_idx -> (hidden_dim,) tensor.
     """
     pos_list, neg_list = [], []
-    for s in tqdm(stimuli, desc=desc):
+    for i, s in enumerate(tqdm(stimuli, desc=desc)):
         pos = extract_completion_acts(
             model, tokenizer, s["user_prompt"], s[pos_key], layers, pool
         )
@@ -101,6 +102,10 @@ def batch_extract_contrastive(model, tokenizer, stimuli, pos_key, neg_key,
         )
         pos_list.append(pos)
         neg_list.append(neg)
+        if (i + 1) % 10 == 0:
+            gc.collect()
+            if torch.cuda.is_available():
+                torch.cuda.empty_cache()
     return pos_list, neg_list
 
 
