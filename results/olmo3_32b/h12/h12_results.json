@@ -1,0 +1,31 @@
+{
+  "baselines": {
+    "mean": 0.35,
+    "individual": [
+      2.498046875,
+      -1.8935546875,
+      -2.29296875,
+      3.3916015625,
+      0.046875
+    ]
+  },
+  "n_stimuli": 5,
+  "alphas": [
+    0.5,
+    1.0,
+    2.0,
+    4.0,
+    8.0
+  ],
+  "metadata": {
+    "model": "allenai/Olmo-3.1-32B-Instruct-DPO",
+    "device": "cuda",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "torch_version": "2.10.0+cu128",
+    "num_layers": 64,
+    "hidden_size": 5120,
+    "num_params_M": 32234,
+    "timestamp": "2026-03-26T14:44:01.238653+00:00",
+    "runtime_s": 203.5
+  }
+}

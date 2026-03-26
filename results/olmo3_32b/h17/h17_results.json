@@ -1,0 +1,69 @@
+{
+  "ols_vs_gs": {
+    "gram_schmidt": {
+      "empathy": 0.09577964207274076,
+      "factual": 0.06262690172203314,
+      "residual": 0.8415934562052261
+    },
+    "ols_type_iii": {
+      "empathy": 0.07790782988827036,
+      "factual": 0.06354690237859442,
+      "residual": 0.8406733941252631
+    },
+    "conclusion_consistent": true
+  },
+  "reversed_ordering": {
+    "empathy_first": {
+      "empathy": 0.09577964207274076,
+      "factual": 0.06262690172203314,
+      "residual": 0.8415934562052261
+    },
+    "factual_first": {
+      "empathy": 0.0768519080879343,
+      "factual": 0.08141871609058593,
+      "residual": 0.8417293758214798
+    },
+    "order_robust": false
+  },
+  "pca": {
+    "layer": 42,
+    "pc1_variance": 0.10162919014692307,
+    "top5_cumulative": 0.33573585748672485,
+    "top10_cumulative": 0.5395468473434448,
+    "cos_mean_diff_pc1": 0.03085324540734291
+  },
+  "steering_specificity": {
+    "0.5": {
+      "real_shift": 0.0001953125,
+      "random_mean": -0.00015714009602864573,
+      "random_std": 0.0025828728296008662,
+      "z_score": 0.13645758784148526,
+      "specific": false
+    },
+    "1.0": {
+      "real_shift": 0.0005695343017578125,
+      "random_mean": -0.00039232889811197954,
+      "random_std": 0.007035714016229305,
+      "z_score": 0.1367115260300602,
+      "specific": false
+    },
+    "2.0": {
+      "real_shift": -0.0008790334065755208,
+      "random_mean": 0.0039948844909667965,
+      "random_std": 0.011886627574014227,
+      "z_score": -0.41003370108081455,
+      "specific": false
+    }
+  },
+  "metadata": {
+    "model": "allenai/Olmo-3.1-32B-Instruct-DPO",
+    "device": "cuda",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "torch_version": "2.10.0+cu128",
+    "num_layers": 64,
+    "hidden_size": 5120,
+    "num_params_M": 32234,
+    "timestamp": "2026-03-26T14:54:45.141252+00:00",
+    "runtime_s": 265.5
+  }
+}

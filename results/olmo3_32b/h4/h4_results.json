@@ -1,0 +1,119 @@
+{
+  "clinical_top10": [
+    {
+      "layer": 42,
+      "head": 5,
+      "shift": -0.04863262176513672
+    },
+    {
+      "layer": 46,
+      "head": 34,
+      "shift": -0.04062519073486328
+    },
+    {
+      "layer": 50,
+      "head": 6,
+      "shift": -0.04003887176513672
+    },
+    {
+      "layer": 43,
+      "head": 13,
+      "shift": -0.038671684265136716
+    },
+    {
+      "layer": 43,
+      "head": 5,
+      "shift": -0.036718559265136716
+    },
+    {
+      "layer": 53,
+      "head": 14,
+      "shift": -0.036718559265136716
+    },
+    {
+      "layer": 42,
+      "head": 14,
+      "shift": -0.03535175323486328
+    },
+    {
+      "layer": 60,
+      "head": 36,
+      "shift": -0.03359375
+    },
+    {
+      "layer": 49,
+      "head": 13,
+      "shift": -0.0330078125
+    },
+    {
+      "layer": 47,
+      "head": 20,
+      "shift": -0.0328125
+    }
+  ],
+  "factual_top10": [
+    {
+      "layer": 60,
+      "head": 9,
+      "shift": -0.05986328125
+    },
+    {
+      "layer": 60,
+      "head": 25,
+      "shift": -0.03212890625
+    },
+    {
+      "layer": 60,
+      "head": 2,
+      "shift": -0.03115234375
+    },
+    {
+      "layer": 60,
+      "head": 34,
+      "shift": -0.03095703125
+    },
+    {
+      "layer": 42,
+      "head": 1,
+      "shift": -0.02666015625
+    },
+    {
+      "layer": 42,
+      "head": 23,
+      "shift": -0.02646484375
+    },
+    {
+      "layer": 43,
+      "head": 29,
+      "shift": -0.025390625
+    },
+    {
+      "layer": 56,
+      "head": 22,
+      "shift": -0.025390625
+    },
+    {
+      "layer": 60,
+      "head": 23,
+      "shift": -0.0240234375
+    },
+    {
+      "layer": 45,
+      "head": 27,
+      "shift": -0.0232421875
+    }
+  ],
+  "overlap_count": 0,
+  "overlap_heads": [],
+  "metadata": {
+    "model": "allenai/Olmo-3.1-32B-Instruct-DPO",
+    "device": "cuda",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "torch_version": "2.10.0+cu128",
+    "num_layers": 64,
+    "hidden_size": 5120,
+    "num_params_M": 32234,
+    "timestamp": "2026-03-26T14:36:54.633923+00:00",
+    "runtime_s": 2078.0
+  }
+}

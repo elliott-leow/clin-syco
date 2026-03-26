@@ -1,0 +1,25 @@
+{
+  "interaction": {
+    "high": {
+      "3": 0.38077457319013774
+    },
+    "low": {
+      "1": 0.6000948073342443
+    },
+    "medium": {
+      "2": 0.43321195244789124
+    }
+  },
+  "slopes": {},
+  "metadata": {
+    "model": "allenai/Olmo-3.1-32B-Instruct-DPO",
+    "device": "cuda",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "torch_version": "2.10.0+cu128",
+    "num_layers": 64,
+    "hidden_size": 5120,
+    "num_params_M": 32234,
+    "timestamp": "2026-03-26T14:44:27.421422+00:00",
+    "runtime_s": 26.2
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "target_layer": 42,
+  "distortion_types": [
+    "all_or_nothing",
+    "catastrophizing",
+    "discounting_positive",
+    "emotional_reasoning",
+    "fortune_telling",
+    "labeling",
+    "magnification_minimization",
+    "mental_filter",
+    "mind_reading",
+    "overgeneralization",
+    "personalization",
+    "should_statements"
+  ],
+  "factual_similarity_at_target": {
+    "all_or_nothing": 0.23114895820617676,
+    "catastrophizing": 0.27093300223350525,
+    "discounting_positive": 0.21600593626499176,
+    "emotional_reasoning": 0.3168477416038513,
+    "fortune_telling": 0.15147703886032104,
+    "labeling": 0.13299228250980377,
+    "magnification_minimization": 0.1156427264213562,
+    "mental_filter": 0.190993070602417,
+    "mind_reading": 0.18360602855682373,
+    "overgeneralization": 0.18918892741203308,
+    "personalization": 0.12242953479290009,
+    "should_statements": 0.16408522427082062
+  },
+  "metadata": {
+    "model": "allenai/Olmo-3.1-32B-Instruct-DPO",
+    "device": "cuda",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "torch_version": "2.10.0+cu128",
+    "num_layers": 64,
+    "hidden_size": 5120,
+    "num_params_M": 32234,
+    "timestamp": "2026-03-26T14:37:47.353852+00:00",
+    "runtime_s": 26.1
+  }
+}

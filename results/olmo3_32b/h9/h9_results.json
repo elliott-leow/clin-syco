@@ -1,0 +1,18 @@
+{
+  "mean_unique_variance_explained": {
+    "empathy": 0.09577964207274076,
+    "factual_sycophancy": 0.06262690172203314,
+    "residual": 0.8415934562052261
+  },
+  "metadata": {
+    "model": "allenai/Olmo-3.1-32B-Instruct-DPO",
+    "device": "cuda",
+    "platform": "Linux-6.6.113+-x86_64-with-glibc2.35",
+    "torch_version": "2.10.0+cu128",
+    "num_layers": 64,
+    "hidden_size": 5120,
+    "num_params_M": 32234,
+    "timestamp": "2026-03-26T14:38:27.085742+00:00",
+    "runtime_s": 39.7
+  }
+}
