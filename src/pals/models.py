@@ -48,7 +48,7 @@ def load_model(name=None, device="cpu", quantize_4bit=False):
             "attn_implementation": "eager",
         }
     elif device == "cuda":
-        kwargs = {"torch_dtype": torch.float16, "device_map": "auto", "attn_implementation": "eager"}
+        kwargs = {"torch_dtype": torch.float16, "device_map": "auto", "attn_implementation": "flash_attention_2"}
 
     model = AutoModelForCausalLM.from_pretrained(name, **kwargs)
     if device == "mps" and not quantize_4bit:
