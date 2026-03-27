@@ -51,7 +51,7 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15, al
 
     device = get_device(model)
     n_layers = model.config.num_hidden_layers
-    test_layers = list(range(n_layers))
+    test_layers = sorted(syc_direction.keys())
 
     # Baseline: measure log_prob difference without intervention
     print("\nComputing baselines...")

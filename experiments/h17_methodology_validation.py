@@ -175,6 +175,9 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_random=20):
     print("\n--- V4: Low-Alpha Steering Specificity ---")
 
     steer_layer = 2 * n_layers // 3
+    # Snap to nearest extracted layer if using a subset
+    if layers is not None and steer_layer not in set(layers):
+        steer_layer = min(layers, key=lambda l: abs(l - steer_layer))
     steer_dir = clinical_dir[steer_layer].to(device)
     steer_norm = steer_dir.norm().item()
 

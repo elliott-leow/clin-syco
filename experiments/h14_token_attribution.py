@@ -33,6 +33,9 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15, ta
     n_layers = model.config.num_hidden_layers
     if target_layer is None:
         target_layer = 2 * n_layers // 3
+    # Snap to nearest extracted layer if using a subset
+    if layers is not None and target_layer not in set(layers):
+        target_layer = min(layers, key=lambda l: abs(l - target_layer))
 
     print(f"\n=== H14: Token Attribution ===")
     print(f"Target layer: {target_layer}")

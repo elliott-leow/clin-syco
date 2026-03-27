@@ -43,6 +43,9 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, target_layer=Non
     n_layers = model.config.num_hidden_layers
     if target_layer is None:
         target_layer = 2 * n_layers // 3
+    # Snap to nearest available layer if using a subset
+    if layers is not None and target_layer not in layers:
+        target_layer = min(layers, key=lambda l: abs(l - target_layer))
 
     print(f"\n=== H7: Distortion-Specific Subspaces ===")
     print(f"Target layer for analysis: {target_layer}")
@@ -89,7 +92,8 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, target_layer=Non
 
         cos = cosine_similarity_by_layer(direction, fact_dir)
         distortion_cos_with_factual[subcat] = cos
-        print(f"  cos with factual at layer {target_layer}: {cos.get(target_layer, 'N/A'):.3f}")
+        val = cos.get(target_layer, None)
+        print(f"  cos with factual at layer {target_layer}: {val:.3f}" if val is not None else f"  cos with factual at layer {target_layer}: N/A")
 
     # Pairwise cosine matrix at target layer
     print(f"\nComputing pairwise cosine matrix at layer {target_layer}...")

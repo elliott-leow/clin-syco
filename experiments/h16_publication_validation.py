@@ -91,6 +91,9 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None,
     )
     syc_direction = compute_contrastive_direction(clin_pos, clin_neg)
     steer_layer = 2 * n_layers // 3  # ~layer 10 for 16-layer model
+    # Snap to nearest extracted layer if using a subset
+    if layers is not None and steer_layer not in set(layers):
+        steer_layer = min(layers, key=lambda l: abs(l - steer_layer))
     steer_alpha = 8.0
 
     generation_examples = []
@@ -278,6 +281,8 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None,
 
     # Compute residual direction at analysis layer
     analysis_layer = 2 * n_layers // 3
+    if layers is not None and analysis_layer not in set(layers):
+        analysis_layer = min(layers, key=lambda l: abs(l - analysis_layer))
     components = {
         "empathy": compute_contrastive_direction(
             *batch_extract_contrastive(model, tokenizer, emotion,
