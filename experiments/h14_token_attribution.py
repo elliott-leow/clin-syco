@@ -93,7 +93,7 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15, ta
 
         # Project last-token hidden state onto sycophancy direction
         last_hidden = hidden_states[target_layer][0, -1, :]
-        projection = last_hidden @ target_dir.to(device)
+        projection = last_hidden.float() @ target_dir.to(device)
 
         # Backprop to input embeddings
         projection.backward()
