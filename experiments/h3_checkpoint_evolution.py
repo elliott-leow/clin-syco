@@ -105,10 +105,16 @@ def run(model, tokenizer, stimuli_dir, output_dir, checkpoints=None,
 
         print(f"  Mean empathy-sycophancy cosine similarity: {mean_sim:.4f}")
 
-        # Free memory
-        del ckpt_model
+        # Free memory and disk (HF cache can be 60-130GB per checkpoint)
+        del ckpt_model, ckpt_tokenizer
         torch.cuda.empty_cache() if torch.cuda.is_available() else None
         import gc; gc.collect()
+        import shutil
+        cache_dir = os.path.join(os.path.expanduser("~"), ".cache/huggingface/hub",
+                                 "models--" + model_id.replace("/", "--"))
+        if os.path.exists(cache_dir):
+            shutil.rmtree(cache_dir)
+            print(f"  Cleared HF cache for {model_id}")
 
     # --- Trend analysis ---
     ckpt_names = list(checkpoints.keys())

@@ -109,9 +109,15 @@ def run(model, tokenizer, stimuli_dir, output_dir,
         all_mean_sims[ckpt_name] = mean_sim
         print(f"  Mean empathy-sycophancy cos: {mean_sim:.4f}")
 
-        del ckpt_model
+        del ckpt_model, ckpt_tok
         torch.cuda.empty_cache() if torch.cuda.is_available() else None
         import gc; gc.collect()
+        import shutil
+        cache_dir = os.path.join(os.path.expanduser("~"), ".cache/huggingface/hub",
+                                 "models--" + model_id.replace("/", "--"))
+        if os.path.exists(cache_dir):
+            shutil.rmtree(cache_dir)
+            print(f"  Cleared HF cache for {model_id}")
 
     # Trend
     print(f"\n--- Entanglement Across Checkpoints ---")
