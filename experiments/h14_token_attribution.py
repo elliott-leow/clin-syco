@@ -1,8 +1,8 @@
 """Hypothesis 14: Token Attribution — Which Prompt Tokens Trigger Sycophancy?
 
 Compute which input tokens most strongly activate the clinical sycophancy
-direction. Use gradient-based attribution: backprop from the projection of the
-last-token hidden state onto the sycophancy direction through to input embeddings.
+direction. Uses projection-based attribution: for each token position, measure
+the absolute projection of its hidden state onto the sycophancy direction.
 
 If emotion words ("devastated", "terrified") dominate, the trigger is affect.
 If first-person pronouns ("I feel", "I think") dominate, it's self-reference.
@@ -58,53 +58,40 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15, ta
     token_importance_counter = Counter()
     token_count = Counter()
 
+    from pals.extraction import extract_activations
     import gc
+    target_dir_gpu = target_dir.to(device)
 
     for si, s in enumerate(clinical):
         input_ids = tokenizer.encode(s["user_prompt"], return_tensors="pt").to(device)
         tokens = tokenizer.convert_ids_to_tokens(input_ids[0])
 
-        # Memory-efficient attribution: use gradient checkpointing approach.
-        # Only need grad from embeddings -> target layer hidden state.
-        embed = model.model.embed_tokens
-        embeddings = embed(input_ids).detach().requires_grad_(True)
+        with torch.no_grad():
+            # Extract per-token hidden states at target layer (seq_len, hidden_dim)
+            acts = extract_activations(model, input_ids, layers=[target_layer])
+            hidden = acts[target_layer]  # (seq_len, hidden_dim) on CPU
 
-        # Forward only through layers 0..target_layer (not the full model)
-        hidden = embeddings
-        for li in range(target_layer + 1):
-            layer_module = model.model.layers[li]
-            layer_out = layer_module(hidden)
-            hidden = layer_out[0] if isinstance(layer_out, tuple) else layer_out
+            # Attribution = absolute projection of each token's hidden state
+            # onto the sycophancy direction. Tokens whose representations align
+            # strongly with the sycophancy direction are the triggers.
+            projections = (hidden @ target_dir.unsqueeze(1)).squeeze().abs().numpy()
+            attr = projections / (projections.sum() + 1e-10)
 
-        # Project last-token hidden state onto sycophancy direction
-        last_hidden = hidden[0, -1, :]
-        projection = last_hidden.float() @ target_dir.to(device)
+        all_attributions.append({
+            "tokens": tokens,
+            "attributions": attr.tolist(),
+            "prompt": s["user_prompt"][:100],
+        })
 
-        # Backprop only through the partial forward graph
-        projection.backward()
+        for tok, imp in zip(tokens, attr):
+            clean_tok = tok.replace("▁", "").replace("Ġ", "").lower().strip()
+            if len(clean_tok) > 1:
+                token_importance_counter[clean_tok] += imp
+                token_count[clean_tok] += 1
 
-        if embeddings.grad is not None:
-            # Attribution = L2 norm of gradient at each token position
-            attr = embeddings.grad[0].float().cpu().norm(dim=-1).detach().numpy()
-            # Normalize
-            attr = attr / (attr.sum() + 1e-10)
-
-            all_attributions.append({
-                "tokens": tokens,
-                "attributions": attr.tolist(),
-                "prompt": s["user_prompt"][:100],
-            })
-
-            # Aggregate token importance
-            for tok, imp in zip(tokens, attr):
-                clean_tok = tok.replace("▁", "").replace("Ġ", "").lower().strip()
-                if len(clean_tok) > 1:  # Skip single chars and empty
-                    token_importance_counter[clean_tok] += imp
-                    token_count[clean_tok] += 1
-
-        del hidden, embeddings, projection
-        gc.collect()
-        torch.cuda.empty_cache()
+        if (si + 1) % 5 == 0:
+            gc.collect()
+            torch.cuda.empty_cache()
 
     # Compute mean importance per unique token
     mean_importance = {}
