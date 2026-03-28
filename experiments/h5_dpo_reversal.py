@@ -81,7 +81,7 @@ def run(model, tokenizer, stimuli_dir, output_dir,
                       "layers": [str(l) for l in layers]},
         }
 
-        del ckpt_model, ckpt_tokenizer
+        del ckpt_model, ckpt_tok
         torch.cuda.empty_cache() if torch.cuda.is_available() else None
         import gc; gc.collect()
         import shutil
