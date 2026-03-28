@@ -58,44 +58,29 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15, ta
     token_importance_counter = Counter()
     token_count = Counter()
 
-    for s in clinical:
+    import gc
+
+    for si, s in enumerate(clinical):
         input_ids = tokenizer.encode(s["user_prompt"], return_tensors="pt").to(device)
         tokens = tokenizer.convert_ids_to_tokens(input_ids[0])
 
-        # Get embedding layer
+        # Memory-efficient attribution: use gradient checkpointing approach.
+        # Only need grad from embeddings -> target layer hidden state.
         embed = model.model.embed_tokens
-        embeddings = embed(input_ids)
-        embeddings.requires_grad_(True)
-        embeddings.retain_grad()
+        embeddings = embed(input_ids).detach().requires_grad_(True)
 
-        # Forward through model with gradient
-        hidden_states = {}
-        hooks = []
-
-        def make_hook(idx):
-            def fn(module, inp, out):
-                h = out[0] if isinstance(out, tuple) else out
-                hidden_states[idx] = h
-            return fn
-
-        hooks.append(model.model.layers[target_layer].register_forward_hook(make_hook(target_layer)))
-
-        # Custom forward with embeddings input
-        # Use inputs_embeds instead of input_ids
-        outputs = model(inputs_embeds=embeddings)
-
-        for h in hooks:
-            h.remove()
-
-        if target_layer not in hidden_states:
-            print(f"  Warning: layer {target_layer} not captured, skipping")
-            continue
+        # Forward only through layers 0..target_layer (not the full model)
+        hidden = embeddings
+        for li in range(target_layer + 1):
+            layer_module = model.model.layers[li]
+            layer_out = layer_module(hidden)
+            hidden = layer_out[0] if isinstance(layer_out, tuple) else layer_out
 
         # Project last-token hidden state onto sycophancy direction
-        last_hidden = hidden_states[target_layer][0, -1, :]
+        last_hidden = hidden[0, -1, :]
         projection = last_hidden.float() @ target_dir.to(device)
 
-        # Backprop to input embeddings
+        # Backprop only through the partial forward graph
         projection.backward()
 
         if embeddings.grad is not None:
@@ -117,7 +102,9 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15, ta
                     token_importance_counter[clean_tok] += imp
                     token_count[clean_tok] += 1
 
-        model.zero_grad()
+        del hidden, embeddings, projection
+        gc.collect()
+        torch.cuda.empty_cache()
 
     # Compute mean importance per unique token
     mean_importance = {}
