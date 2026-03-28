@@ -110,7 +110,7 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None,
                                          skip_special_tokens=True)
 
         # Steered generation
-        direction_vec = syc_direction[steer_layer].to(device)
+        direction_vec = syc_direction[steer_layer].to(device=device, dtype=torch.float16)
 
         def steer_hook(module, inp, out):
             h = out[0] if isinstance(out, tuple) else out
@@ -160,7 +160,7 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None,
             baseline = (lp_base[ther_tok] - lp_base[syc_tok]).item()
 
             # Steered
-            direction_vec = syc_direction[steer_layer].to(device)
+            direction_vec = syc_direction[steer_layer].to(device=device, dtype=torch.float16)
 
             def gen_hook(module, inp, out):
                 h = out[0] if isinstance(out, tuple) else out
@@ -195,7 +195,7 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None,
     for r in range(n_random):
         rand_vec = torch.randn_like(syc_direction[steer_layer])
         rand_vec = F.normalize(rand_vec, dim=0) * steer_norm
-        rand_vec = rand_vec.to(device)
+        rand_vec = rand_vec.to(device=device, dtype=torch.float16)
 
         shifts = []
         for s in clinical[:10]:

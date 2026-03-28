@@ -178,7 +178,7 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_random=20):
     # Snap to nearest extracted layer if using a subset
     if layers is not None and steer_layer not in set(layers):
         steer_layer = min(layers, key=lambda l: abs(l - steer_layer))
-    steer_dir = clinical_dir[steer_layer].to(device)
+    steer_dir = clinical_dir[steer_layer].to(device=device, dtype=torch.float16)
     steer_norm = steer_dir.norm().item()
 
     test_alphas = [0.5, 1.0, 2.0]
@@ -218,7 +218,7 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_random=20):
         for r in range(n_random):
             rand_vec = torch.randn_like(steer_dir)
             rand_vec = F.normalize(rand_vec, dim=0) * steer_norm
-            rand_vec = rand_vec.to(device)
+            rand_vec = rand_vec.to(device=device, dtype=torch.float16)
 
             rand_shifts = []
             for s in clinical[:15]:

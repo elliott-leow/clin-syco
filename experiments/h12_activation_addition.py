@@ -79,7 +79,7 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15, al
 
         for target_layer in test_layers:
             shifts = []
-            direction_vec = syc_direction[target_layer].to(device)
+            direction_vec = syc_direction[target_layer].to(device=device, dtype=torch.float16)
 
             for s in clinical:
                 input_ids = tokenizer.encode(s["user_prompt"], return_tensors="pt").to(device)

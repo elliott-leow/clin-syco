@@ -46,7 +46,8 @@ def logit_lens(model, input_ids, position=-1):
 
     logits = {}
     for i in range(n_layers):
-        h = hidden_states[i][0, position, :].unsqueeze(0).unsqueeze(0).to(device)
+        model_dtype = next(model.parameters()).dtype
+        h = hidden_states[i][0, position, :].unsqueeze(0).unsqueeze(0).to(device=device, dtype=model_dtype)
         normed = norm(h)
         logits[i] = lm_head(normed).squeeze().float().cpu()
 

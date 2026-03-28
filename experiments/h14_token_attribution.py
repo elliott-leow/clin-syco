@@ -60,7 +60,6 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15, ta
 
     from pals.extraction import extract_activations
     import gc
-    target_dir_gpu = target_dir.to(device)
 
     for si, s in enumerate(clinical):
         input_ids = tokenizer.encode(s["user_prompt"], return_tensors="pt").to(device)

@@ -43,7 +43,9 @@ def direction_to_tokens(model, direction, top_k=20):
     lm_head = model.lm_head
 
     # Apply final layernorm then unembedding
-    d = direction.unsqueeze(0).unsqueeze(0).to(get_device(model))
+    device = get_device(model)
+    model_dtype = next(model.parameters()).dtype
+    d = direction.unsqueeze(0).unsqueeze(0).to(device=device, dtype=model_dtype)
     normed = norm(d)
     logits = lm_head(normed).squeeze().float().cpu()
 
