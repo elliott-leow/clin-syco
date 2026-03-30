@@ -79,7 +79,8 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15,
         def make_ctx():
             return apply_steering(model, steer_layer, direction, alpha)
 
-        effect = evaluate_steering_effect(model, tokenizer, clinical, make_ctx)
+        effect = evaluate_steering_effect(model, tokenizer, clinical, make_ctx,
+                                           random_layer=steer_layer, random_alpha=alpha)
         results["methods"][f"single_layer_alpha{alpha}"] = effect
         print(f"  alpha={alpha}: shift={effect['mean_shift']:+.4f}, z={effect['z_score']:.2f}")
 
@@ -96,7 +97,8 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15,
         def make_ctx():
             return apply_multi_layer_steering(model, triples)
 
-        effect = evaluate_steering_effect(model, tokenizer, clinical, make_ctx)
+        effect = evaluate_steering_effect(model, tokenizer, clinical, make_ctx,
+                                           random_layer=steer_layer, random_alpha=alpha)
         results["methods"][f"multi_layer_alpha{alpha}"] = effect
         print(f"  alpha={alpha}: shift={effect['mean_shift']:+.4f}, z={effect['z_score']:.2f}")
 
@@ -114,7 +116,8 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15,
         def make_ctx():
             return apply_subspace_steering(model, steer_layer, pca_matrix, pca_alphas)
 
-        effect = evaluate_steering_effect(model, tokenizer, clinical, make_ctx)
+        effect = evaluate_steering_effect(model, tokenizer, clinical, make_ctx,
+                                           random_layer=steer_layer, random_alpha=alpha)
         results["methods"][f"pca_subspace_alpha{alpha}"] = effect
         print(f"  alpha={alpha}: shift={effect['mean_shift']:+.4f}, z={effect['z_score']:.2f}")
 

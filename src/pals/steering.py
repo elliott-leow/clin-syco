@@ -180,27 +180,18 @@ def _logit_diff(model, tokenizer, stimulus):
 
 @torch.no_grad()
 def evaluate_steering_effect(model, tokenizer, stimuli, steering_context_fn,
-                             n_random=10):
+                             n_random=10, random_layer=None, random_alpha=8.0):
     """Evaluate steering vs baseline and random-vector controls.
 
     Args:
         model: HuggingFace causal LM.
         tokenizer: Matching tokenizer.
-        stimuli: List of stimulus dicts (user_prompt, therapeutic_completion,
-                 sycophantic_completion).
-        steering_context_fn: Callable that returns a context manager.  It may
-            optionally accept a single keyword argument ``direction_override``
-            (a tensor) so that random-vector controls can reuse the same
-            layer/alpha.  Example with override support::
-
-                def make_ctx(direction_override=None):
-                    d = direction_override if direction_override is not None else vec
-                    return apply_steering(model, 11, d, 8.0)
-
-            If the callable does not accept ``direction_override`` the random
-            baseline falls back to measuring stimulus-level variance under no
-            intervention.
-        n_random: Number of random direction trials for the z-score baseline.
+        stimuli: List of stimulus dicts.
+        steering_context_fn: Callable that returns a context manager.
+        n_random: Number of random direction trials for z-score.
+        random_layer: Layer to use for random-vector baseline. Required if
+            steering_context_fn doesn't support direction_override.
+        random_alpha: Alpha for random-vector baseline.
 
     Returns:
         dict with keys: baseline_diffs, steered_diffs, mean_baseline,
@@ -235,14 +226,17 @@ def evaluate_steering_effect(model, tokenizer, stimuli, steering_context_fn,
         rand_dir = F.normalize(rand_dir, dim=0)
 
         if supports_override:
-            # Steer with a random direction at the same layer/alpha
             rand_diffs = []
             for s in stimuli:
                 with steering_context_fn(direction_override=rand_dir):
                     rand_diffs.append(_logit_diff(model, tokenizer, s))
+        elif random_layer is not None:
+            rand_diffs = []
+            for s in stimuli:
+                with apply_steering(model, random_layer, rand_dir, random_alpha):
+                    rand_diffs.append(_logit_diff(model, tokenizer, s))
         else:
-            # Fallback: re-measure baselines (shift will be ~0; variance
-            # across trials captures measurement noise).
+            # No layer info available — measure baselines as noise floor
             rand_diffs = [_logit_diff(model, tokenizer, s) for s in stimuli]
 
         random_shifts.append(float(np.mean(rand_diffs)) - mean_baseline)
@@ -376,7 +370,7 @@ def train_nonlinear_steering(model, tokenizer, stimuli, layer,
     # --- Step 2: train MLP on cached data ---
     hidden_dim = cached_acts.shape[1]
     mlp = SteeringMLP(hidden_dim, hidden_size)
-    optimizer = torch.optim.Adam(mlp.parameters(), lr=lr)
+    optimizer = torch.optim.Adam(mlp.parameters(), lr=lr, weight_decay=0.1)
 
     print(f"Training nonlinear steering MLP ({hidden_size} hidden)...")
     train_log = []
@@ -393,9 +387,11 @@ def train_nonlinear_steering(model, tokenizer, stimuli, layer,
         lp_ther = lp[torch.arange(len(stimuli)), ther_toks_t]
         lp_syc = lp[torch.arange(len(stimuli)), syc_toks_t]
 
-        # Loss: negative of the therapeutic advantage (we want to maximise it)
-        loss = -(lp_ther - lp_syc).mean()
+        # Loss: negative therapeutic advantage + L2 penalty on offset magnitude
+        offset_penalty = 0.01 * (offsets ** 2).mean()
+        loss = -(lp_ther - lp_syc).mean() + offset_penalty
         loss.backward()
+        torch.nn.utils.clip_grad_norm_(mlp.parameters(), 1.0)
         optimizer.step()
         train_log.append(loss.item())
 
