@@ -134,6 +134,29 @@ def apply_subspace_steering(model, layer, directions_matrix, alphas, position=-1
         hook.remove()
 
 
+@contextmanager
+def apply_nonlinear_steering(model, layer, mlp, position=-1):
+    """Apply a learned MLP steering offset at a given layer."""
+    device = get_device(model)
+    model_dtype = next(model.parameters()).dtype
+
+    def hook_fn(module, inp, out):
+        h = out[0] if isinstance(out, tuple) else out
+        h = h.clone()
+        act = h[:, position, :].float().cpu()
+        offset = mlp(act).to(device=device, dtype=model_dtype)
+        h[:, position, :] -= offset
+        if isinstance(out, tuple):
+            return (h,) + out[1:]
+        return h
+
+    hook = model.model.layers[layer].register_forward_hook(hook_fn)
+    try:
+        yield
+    finally:
+        hook.remove()
+
+
 # ---------------------------------------------------------------------------
 # Evaluation harness
 # ---------------------------------------------------------------------------
@@ -356,6 +379,7 @@ def train_nonlinear_steering(model, tokenizer, stimuli, layer,
     optimizer = torch.optim.Adam(mlp.parameters(), lr=lr)
 
     print(f"Training nonlinear steering MLP ({hidden_size} hidden)...")
+    train_log = []
     for epoch in range(epochs):
         optimizer.zero_grad()
 
@@ -373,6 +397,7 @@ def train_nonlinear_steering(model, tokenizer, stimuli, layer,
         loss = -(lp_ther - lp_syc).mean()
         loss.backward()
         optimizer.step()
+        train_log.append(loss.item())
 
         if (epoch + 1) % 10 == 0 or epoch == 0:
             print(f"  epoch {epoch+1:3d}/{epochs}  "
@@ -385,4 +410,4 @@ def train_nonlinear_steering(model, tokenizer, stimuli, layer,
         torch.cuda.empty_cache()
 
     mlp.eval()
-    return mlp
+    return mlp, train_log
