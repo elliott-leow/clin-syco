@@ -56,7 +56,8 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15,
         from pals.steering import apply_nonlinear_steering
         return apply_nonlinear_steering(model, steer_layer, mlp)
 
-    nonlinear_effect = evaluate_steering_effect(model, tokenizer, clinical, make_nonlinear_ctx)
+    nonlinear_effect = evaluate_steering_effect(model, tokenizer, clinical, make_nonlinear_ctx,
+                                                random_layer=steer_layer, random_alpha=8.0)
     print(f"  Nonlinear: shift={nonlinear_effect['mean_shift']:+.4f}, z={nonlinear_effect['z_score']:.2f}")
 
     # linear baseline for comparison
@@ -73,7 +74,8 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15,
         def make_linear_ctx(a=alpha):
             return apply_steering(model, steer_layer, direction_gpu, a)
 
-        linear_effect = evaluate_steering_effect(model, tokenizer, clinical, make_linear_ctx)
+        linear_effect = evaluate_steering_effect(model, tokenizer, clinical, make_linear_ctx,
+                                                  random_layer=steer_layer, random_alpha=alpha)
         print(f"  Linear alpha={alpha}: shift={linear_effect['mean_shift']:+.4f}, z={linear_effect['z_score']:.2f}")
 
     results = {
