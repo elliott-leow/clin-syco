@@ -19,7 +19,7 @@ from pals.models import get_device
 
 
 def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15,
-        hidden_size=32, epochs=30, lr=1e-3):
+        hidden_size=32, epochs=30, lr=1e-3, steer_layer=None):
     os.makedirs(output_dir, exist_ok=True)
 
     with open(os.path.join(stimuli_dir, "cognitive_distortions.json")) as f:
@@ -30,10 +30,11 @@ def run(model, tokenizer, stimuli_dir, output_dir, layers=None, n_stimuli=15,
     device = get_device(model)
     model_dtype = next(model.parameters()).dtype
 
-    # pick steering layer
-    steer_layer = 2 * n_layers // 3
-    if layers is not None and steer_layer not in layers:
-        steer_layer = min(layers, key=lambda l: abs(l - steer_layer))
+    # pick steering layer (prefer caller-specified, fall back to 2/3 depth)
+    if steer_layer is None:
+        steer_layer = 2 * n_layers // 3
+        if layers is not None and steer_layer not in layers:
+            steer_layer = min(layers, key=lambda l: abs(l - steer_layer))
 
     print(f"\n=== H21: Nonlinear Steering ===")
     print(f"Steering layer: {steer_layer}")
